@@ -34,7 +34,6 @@ class Server{
 
   routes(){
     this.app.use(this.paths.index, require('../routes/index'))
-    // this.app.use(this.paths.uploads, require('../routes/uploads'))
   }
 
 }
