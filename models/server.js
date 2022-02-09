@@ -37,12 +37,6 @@ class Server{
     // this.app.use(this.paths.uploads, require('../routes/uploads'))
   }
 
-  listen(){
-    this.app.listen(this.port, () => {
-      console.log(`Servidor corriendo en localhost:${this.port}`)
-    })
-  }
-
 }
 
 module.exports = Server
