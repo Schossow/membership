@@ -5,8 +5,6 @@ const { dbConnection } = require('../database/config')
 class Server{
   constructor(){
     this.app = express()
-    this.port = process.env.PORT
-
     this.paths = {
       // uploads: '/api/uploads',
       index: '/api',
@@ -34,6 +32,10 @@ class Server{
 
   routes(){
     this.app.use(this.paths.index, require('../routes/index'))
+  }
+
+  listen(){
+    this.app.use('/api', this.routes)
   }
 
 }
